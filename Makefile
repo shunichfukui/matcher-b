@@ -25,7 +25,7 @@ annotate:
 	docker compose exec backend bundle exec annotate
 
 migrate:
-	docker compose exec backend bundle exec ridgepole --config config/database.yml --env development --file db/schemas/Schemafile --apply
+	docker compose exec backend bundle exec rake db:ridgepole_apply_and_annotate
 
 rollback:
 	docker compose exec backend rails db:rollback
