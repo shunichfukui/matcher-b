@@ -1,6 +1,9 @@
 .PHONY: up spec rubocop annotate
 
 up:
+	docker compose up
+
+up-d:
 	docker compose up -d
 
 down:

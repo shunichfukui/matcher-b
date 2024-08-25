@@ -2,11 +2,12 @@
 #
 # Table name: users
 #
-#  id     :bigint           not null, primary key
-#  age    :integer          default(20), not null
-#  email  :string(255)      default(""), not null
-#  name   :string(255)      default(""), not null
-#  status :integer          default("normal"), not null
+#  id              :bigint           not null, primary key
+#  age             :integer          default(20), not null
+#  email           :string(255)      default(""), not null
+#  name            :string(255)      default(""), not null
+#  password_digest :string(255)      default(""), not null
+#  status          :integer          default("normal"), not null
 #
 class User < ApplicationRecord
   has_secure_password
