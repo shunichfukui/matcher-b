@@ -1,4 +1,6 @@
 class Api::V1::AuthController < ApplicationController
+  skip_before_action :authorize_request, only: [:login, :register]
+
   def register
     @user = User.new(user_params)
     if @user.save

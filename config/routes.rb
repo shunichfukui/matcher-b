@@ -8,9 +8,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:create, :show]
+      resources :users, only: [:create]
       post '/login', to: 'auth#login'
       post '/register', to: 'auth#register'
+      get '/current_user', to: 'users#current'
     end
   end
 end
