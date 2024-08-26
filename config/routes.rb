@@ -14,4 +14,12 @@ Rails.application.routes.draw do
       get '/current_user', to: 'users#current'
     end
   end
+
+  namespace :admin do
+    namespace :api do
+      namespace :v1 do
+        get '/check_admin', to: 'admin#check_admin'
+      end
+    end
+  end
 end
